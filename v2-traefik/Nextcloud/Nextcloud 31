@@ -16,9 +16,9 @@ server {
   {{nginx_access_log}}
   {{nginx_error_log}}
 
-  if ($scheme != "https") {
-    rewrite ^ https://$host$request_uri permanent;
-  }
+  #if ($scheme != "https") {
+  #  rewrite ^ https://$host$request_uri permanent;
+  #}
 
   # set max upload size and increase upload timeout:
   client_max_body_size 512M;
